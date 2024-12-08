@@ -34,9 +34,9 @@
         }
        </style>
 </head>
-<body>
+  <body>
     <!-- Header section here -->
-    <header class="sticky top-0 glass shadow-none pb-6">
+    <header class="sticky top-0 z-10 glass shadow-none pb-6">
         <nav class="navbar justify-between md:px-10  py-6 bg-secondaryColor shadow-md">
             <div class="">
               <a href="faq.html" class="btn bg-primaryColor text-xs md:text-xl">Blog</a>
@@ -47,18 +47,20 @@
                 <span>Donate Bangladesh</span>
             </a>
             </button>
-            <button class="">
-              <a class="md:hidden md:btn flex md:flex-none items-center gap-1 bg-transparent text-xs md:text-xl">
-                <img src="assets/coin.png" alt="coin">
-                <span>5500 BDT</span>
-              </a>
-            </button>
-            <button>
-              <a class=" hidden md:flex btn bg-transparent text-xs md:text-xl">
-                <img src="assets/coin.png" alt="coin">
-                <span>5500 BDT</span>
-              </a>
-            </button>
+            <div>
+              <button class="">
+                <a class="md:hidden md:btn flex md:flex-none items-center gap-1 bg-transparent text-xs md:text-xl">
+                  <img src="assets/coin.png" class="w-6" alt="coin">
+                  <span>5500 BDT</span>
+                </a>
+              </button>
+              <button>
+                <a class=" hidden md:flex btn bg-transparent text-xs md:text-xl">
+                  <img src="assets/coin.png" class="w-6" alt="coin">
+                  <span>5500 BDT</span>
+                </a>
+              </button>
+            </div>
           </nav>
           <!-- button -->
           <div class="mt-10 text-center">
@@ -66,6 +68,78 @@
             <a class="btn bg-transparent active:bg-primaryColor text-xs md:text-xl">History</a>
           </div>
     </header>
+    <main class="max-w-[1440px] mx-auto px-3 md:px-14 lg:px-36">
+      <!-- card section here -->
+       <!-- card 1 -->
+      <div class="card lg:card-side bg-base-100 shadow-md">
+        <figure class="lg:w-1/2">
+          <img
+            src="assets/noakhali.png"
+            alt="Album" />
+        </figure>
+        <div class="card-body lg:w-1/2">
+          <button class="btn w-28">
+            <img src="assets/coin.png" class="w-6" alt="">
+            <span>0 BDT</span>
+          </button>
+          <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+          <p>
+            The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+            <button class="btn bg-primaryColor w-full">Donate Now</button>
+          </div>
+        </div>
+      </div>
+       <!-- card 2 -->
+      <div class="card lg:card-side bg-base-100 shadow-md my-8">
+        <figure class="lg:w-1/2">
+          <img class="cover"
+            src="assets/feni.png"
+            alt="Album" />
+        </figure>
+        <div class="card-body lg:w-1/2">
+          <button class="btn w-28">
+            <img src="assets/coin.png" class="w-6" alt="">
+            <span>0 BDT</span>
+          </button>
+          <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
+          <p>
+            The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+            <button class="btn bg-primaryColor w-full">Donate Now</button>
+          </div>
+        </div>
+      </div>
+       <!-- card 3 -->
+      <div class="card lg:card-side bg-base-100 shadow-md">
+        <figure class="lg:w-1/2">
+          <img
+            src="assets/quota-protest.png"
+            alt="Album" />
+        </figure>
+        <div class="card-body lg:w-1/2">
+          <button class="btn w-28">
+            <img src="assets/coin.png" class="w-6" alt="">
+            <span>0 BDT</span>
+          </button>
+          <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+          <p>
+            The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+            <button class="btn bg-primaryColor w-full">Donate Now</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer section here -->
+     <footer class="min-h-24 bg-secondaryColor mt-10">
 
-</body>
+     </footer>
+  </body>
 </html>
