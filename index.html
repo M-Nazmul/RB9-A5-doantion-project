@@ -35,7 +35,17 @@
         .tablinks.active{
           background: #B4F461;
         }
+        #History #donation-history > li{
+          padding: 32px;
+          margin-bottom: 24px;
+          border: 1px solid #eee;;
+          border-radius: 16px;
+          line-height: 26px;
+        }
+        /* css */
+        
        </style>
+       
 </head>
   <body>
     <!-- Header section here -->
@@ -52,17 +62,17 @@
             </button>
             <div>
               <button class="">
-                <a class="md:hidden md:btn flex md:flex-none items-center gap-1 bg-transparent text-xs md:text-xl">
+                <a class="btn flex md:flex-none items-center gap-1 bg-transparent text-xs md:text-xl">
                   <img src="assets/coin.png" class="w-6" alt="coin">
-                  <span>5500 BDT</span>
+                  <p><span id="main-balance">5500</span> BDT</p>
                 </a>
               </button>
-              <button>
-                <a class=" hidden md:flex btn bg-transparent text-xs md:text-xl">
+              <!-- <button>
+                <a class=" hidden md:flex btn-none md:btn bg-transparent text-xs md:text-xl">
                   <img src="assets/coin.png" class="w-6" alt="coin">
-                  <span>5500 BDT</span>
+                  <p><span id="main-balance">5500</span> BDT</p>
                 </a>
-              </button>
+              </button> -->
             </div>
           </nav>
           <!-- Tab button -->
@@ -75,75 +85,85 @@
       <!-- card section here -->
       <div id="Donation" class="tabcontent">
         <!-- card 1 -->
-        <div class="card lg:card-side bg-base-100 shadow-md">
+        <div class="donation-section card lg:card-side bg-base-100 shadow-md">
           <figure class="lg:w-1/2">
             <img
               src="assets/noakhali.jpg"
               alt="Album" />
           </figure>
           <div class="card-body lg:w-1/2">
-            <button class="btn w-28">
+            <button class="btn max-w-[136px]">
               <img src="assets/coin.png" class="w-6" alt="">
-              <span>0 BDT</span>
+              <p><span id="current-noakhali">0 </span> BDT</p>
             </button>
-            <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+            <h2 class="card-title donation-title">Donate for Flood at Noakhali, Bangladesh</h2>
             <p>
               The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
             </p>
             <div class="flex gap-2 flex-wrap">
-              <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-              <button class="btn bg-primaryColor w-full">Donate Now</button>
+              <input type="number" id="donation-noakhali" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+              <button class="btn bg-primaryColor w-full" onclick="makeDonation('noakhali')">Donate Now</button>
             </div>
           </div>
         </div>
         <!-- card 2 -->
-        <div class="card lg:card-side bg-base-100 shadow-md my-8">
+        <div class="donation-section card lg:card-side bg-base-100 shadow-md my-8">
           <figure class="lg:w-1/2">
             <img class="cover"
               src="assets/feni.jpg"
               alt="Album" />
           </figure>
           <div class="card-body lg:w-1/2">
-            <button class="btn w-28">
+            <button class="btn max-w-[136px]">
               <img src="assets/coin.png" class="w-6" alt="">
-              <span>0 BDT</span>
+              <p><span id="current-feni">0 </span> BDT</p>
             </button>
-            <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
+            <h2 class="card-title donation-title">Donate for Flood Relief in Feni,Bangladesh</h2>
             <p>
               The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
             </p>
             <div class="flex gap-2 flex-wrap">
-              <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-              <button class="btn bg-primaryColor w-full">Donate Now</button>
+              <input type="number" id="donation-feni" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+              <button class="btn bg-primaryColor w-full" onclick="makeDonation('feni')">Donate Now</button>
             </div>
           </div>
         </div>
         <!-- card 3 -->
-        <div class="card lg:card-side bg-base-100 shadow-md">
+        <div class="donation-section card lg:card-side bg-base-100 shadow-md">
           <figure class="lg:w-1/2">
             <img
               src="assets/quota-protest.jpg"
               alt="Album" />
           </figure>
           <div class="card-body lg:w-1/2">
-            <button class="btn w-28">
+            <button class="btn max-w-[136px]">
               <img src="assets/coin.png" class="w-6" alt="">
-              <span>0 BDT</span>
+              <p><span id="current-quota">0 </span> BDT</p>
             </button>
-            <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+            <h2 class="card-title donation-title">Aid for Injured in the Quota Movement</h2>
             <p>
               The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
             </p>
             <div class="flex gap-2 flex-wrap">
-              <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-              <button class="btn bg-primaryColor w-full">Donate Now</button>
+              <input type="number" id="donation-quota" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+              <button class="btn bg-primaryColor w-full" onclick="makeDonation('quota')">Donate Now</button>
             </div>
           </div>
         </div>
       </div>
-      <div id="History" class="tabcontent">
-        <p class="text-xl text-gray-600">This is the history tab</p>
+      <div id="History" class="tabcontent donation-history">
+        <p class="text-xl text-gray-600">This is the history tab</p><br>
+        <ul id="donation-history">
+          <li>No donations yet.</li>
+      </ul>
       </div>
+    <div id="congrats-modal" class="modal ">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>Congratulations! <br> You Have Donation for Humankind</p>
+          <p>Successfully</p>          
+      </div>
+  </div>
     </main>
     <!-- footer section here -->
     <footer class="min-h-24 bg-secondaryColor mt-10">
@@ -167,5 +187,6 @@
         // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
     </script>
+    <script src="Js/script.js"></script>
   </body>
 </html>
