@@ -41,40 +41,31 @@
           border: 1px solid #eee;;
           border-radius: 16px;
           line-height: 26px;
-        }
-        /* css */
-        
+        }  
        </style>
-       
 </head>
   <body>
     <!-- Header section here -->
     <header class="sticky top-0 z-10 glass shadow-none pb-3 md:pb-6">
-        <nav class="navbar justify-between md:px-10  py-6 bg-secondaryColor shadow-md">
+        <nav class="navbar justify-between px-1 md:px-10 py-3 md:py-6 bg-secondaryColor shadow-md">
             <div class="">
               <a href="faq.html" class="btn bg-primaryColor text-xs md:text-xl">Blog</a>
             </div>
             <button class="">
               <a class="flex items-center p-2 cursor-pointer gap-4 font-semibold text-xs md:text-xl">
-                <img src="assets/logo.png" class="max-h-10" alt="logo">
+                <img src="assets/logo.png" class="max-w-8" alt="logo">
                 <span>Donate Bangladesh</span>
             </a>
             </button>
             <div>
               <button class="">
                 <a class="btn flex md:flex-none items-center gap-1 bg-transparent text-xs md:text-xl">
-                  <img src="assets/coin.png" class="w-6" alt="coin">
+                  <img src="assets/coin.png" class="max-w-4 md:max-w-6" alt="coin">
                   <p><span id="main-balance">5500</span> BDT</p>
                 </a>
               </button>
-              <!-- <button>
-                <a class=" hidden md:flex btn-none md:btn bg-transparent text-xs md:text-xl">
-                  <img src="assets/coin.png" class="w-6" alt="coin">
-                  <p><span id="main-balance">5500</span> BDT</p>
-                </a>
-              </button> -->
             </div>
-          </nav>
+        </nav>
           <!-- Tab button -->
           <div class="mt-3 md:mt-10 mx-auto text-center">
             <button id="defaultOpen"  class="tablinks btn text-xs md:text-xl mr-4" onclick="openDonation(event, 'Donation')">Donation</button>
@@ -157,36 +148,24 @@
           <li>No donations yet.</li>
       </ul>
       </div>
-    <div id="congrats-modal" class="modal ">
+      <!-- <div id="congrats-modal" class="modal ">
       <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <p>Congratulations! <br> You Have Donation for Humankind</p>
           <p>Successfully</p>          
       </div>
-  </div>
+      </div> -->
     </main>
+        <!-- Modal -->
+        <div id="congrats-modal" class="modal">
+          <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <p>Congratulations! Your donation was successful.</p>
+          </div>
+      </div>
     <!-- footer section here -->
     <footer class="min-h-24 bg-secondaryColor mt-10">
-
     </footer>
-    <script>
-      function openDonation(evt, donationName) {
-        let i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-          tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-          document.getElementById(donationName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-  
-        // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script>
     <script src="Js/script.js"></script>
   </body>
 </html>

@@ -11,15 +11,15 @@ function makeDonation(section) {
 
     if (section === 'noakhali') {
         donationInput = document.getElementById('donation-noakhali');
-        donationTitle = 'Noakhali';
+        donationTitle = 'Donate for Flood at Noakhali, Bangladesh';
         currentDonationDisplay = document.getElementById('current-noakhali');
     } else if (section === 'feni') {
         donationInput = document.getElementById('donation-feni');
-        donationTitle = 'Feni';
+        donationTitle = 'Donate for Flood Relief in Feni,Bangladesh';
         currentDonationDisplay = document.getElementById('current-feni');
     } else if (section === 'quota') {
         donationInput = document.getElementById('donation-quota');
-        donationTitle = 'Quota';
+        donationTitle = 'Aid for Injured in the Quota Movement';
         currentDonationDisplay = document.getElementById('current-quota');
     }
 
@@ -57,7 +57,7 @@ function addDonationToHistory(amount, title) {
 
 
     const donationTitle = document.createElement('strong');
-    donationTitle.textContent = `${amount} Taka is Donated for ${title}`;
+    donationTitle.textContent = `${amount} Taka is ${title}`;
 
     const donationDate = document.createElement('p');
     donationDate.style.fontSize = '0.9em';
@@ -84,6 +84,25 @@ function addDonationToHistory(amount, title) {
     
 }
 
+// tab
+function openDonation(evt, donationName) {
+  let i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+    tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+    document.getElementById(donationName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+document.getElementById("defaultOpen").click();
+
+// modal
 function showModal() {
     const modal = document.getElementById('congrats-modal');
     modal.style.display = 'flex';  // Display modal as flexbox to center it
@@ -95,9 +114,9 @@ function closeModal() {
 }
 
 // Close the modal if the user clicks anywhere outside of it
-window.onclick = function(event) {
-    const modal = document.getElementById('congrats-modal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-}
+// window.onclick = function(event) {
+//     const modal = document.getElementById('congrats-modal');
+//     if (event.target === modal) {
+//         modal.style.display = 'none';
+//     }
+// }
